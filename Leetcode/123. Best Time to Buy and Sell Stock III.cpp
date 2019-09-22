@@ -7,7 +7,7 @@ public:
         int minPrice = prices[0];
         int maxProfit = 0;
         vector<int> dpFirst(prices.size(), 0);
-        
+
         for(int i=0; i<prices.size(); i++){
             if(prices[i]<minPrice){
                 minPrice = prices[i];
@@ -16,7 +16,7 @@ public:
             }
             dpFirst[i] = maxProfit;
         }
-        
+
         maxProfit = 0;
         int maxPrice = prices[prices.size()-1];
         int tempProfit = 0;
@@ -33,7 +33,5 @@ public:
             }
         }
         return tempProfit;
-
-        
     }
 };
